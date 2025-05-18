@@ -28,10 +28,12 @@ jobs:
     - name: Build docker image
       run: |
         docker build -t mgutbor/mmx-graphql:0.0.1 .
+        docker build -t mgutbor/mmx-graphql:latest .
 
     - name: Push docker image to dockerhub repository
       run: |
         docker push mgutbor/mmx-graphql:0.0.1
+        docker push mgutbor/mmx-graphql:latest
     
 #    - name: Build the Docker image
 #      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
